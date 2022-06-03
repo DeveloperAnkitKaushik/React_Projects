@@ -1,173 +1,82 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
-
 * {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-  font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-button{
-  border: none;
+.container-fluid {
+    width: 90%;
+    margin: auto;
 }
 
-.header {
-  width: 100%;
-  line-height: 70px;
-  background-color: #f5ba13;
-  display: flex;
-  align-items: center;
-  padding-left: 50px;
-  color: white;
-  box-shadow: 5px 3px 15px -5px rgba (0, 0, 0, 0.3);
+.table-responsive {
+    max-height: 700px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
 }
 
-.header img {
-  height: 4rem;
-  width: 5rem;
-  margin-right: 2rem;
+tr:hover {
+    background-color: #ffa;
 }
 
-.main_note {
-  width: 500px;
-  padding: 15px 10px 5px 10px;
-  margin: 20px auto;
+td,
+th {
+    position: relative;
 }
 
-
-
-.my_notes h1 {
-  color: #34495e;
+.table td,
+.table th {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: none;
 }
 
-.my_notes p {
-  color: grey;
+td:hover::after,
+th:hover::after {
+    content: "";
+    position: absolute;
+    background-color: #f2f2f2;
+    left: 0;
+    top: -5000px;
+    height: 5000px;
+    width: 100%;
+    z-index: -1;
 }
 
-form {
-  min-height: 50px;
-  color: #ecf0f1;
-  padding: 15px 10px 5px 10px;
-  box-shadow: 3px 5px 15px -5px rgba(0, 0, 0, .3);
-  border-radius: 10px;
-  position: relative;
+.heading-span{
+    color: orange;
+    font-weight:bolder;
 }
 
-input {
-  width: 100%;
-  line-height: 30px;
-  background-color: transparent;
-  border: none;
-  outline: none;
-  font-size: 1.5rem;
-  margin: 10px 0;
-  font-weight: bold;
+.table tr td:hover:nth-child(4) {
+    background-color: rgb(231, 83, 115);
+    color: aliceblue;
+    border: 0.5px solid rgb(12, 12, 12);
 }
 
-textarea {
-  width: 100%;
-  line-height: 30px;
-  background: transparent;
-  border: none;
-  outline: none;
-  font-size: 1rem;
-  margin: 10px 0;
-  resize: none;
-  height: 10rem;
+.table tr td:hover {
+    background-color: rgb(117, 223, 122);
+    color: aliceblue;
+    border: 0.5px solid rgb(12, 12, 12);
 }
 
-.btn {
-  height: 4rem;
-  width: 4rem;
-  position: absolute;
-  bottom: -2rem;
-  right: 2rem;
-  background-color: #f4b400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.3s;
+.thead-dark {
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-.btn i {
-  color: white;
-  font-size: 2rem;
+.table-container{
+    overflow: hidden;
 }
 
-.btn:hover {
-  background-color: black
+.footer{
+    margin-top: 2rem;
+    background-color: rgb(54, 53, 53);
+    font-size: 1.3rem;
+    color: white;
+    text-align: center;
 }
 
-.btn:hover i {
-  color: #f4b400;
-}
-
-.note {
-  background: #fff;
-  border-radius: 7px;
-  box-shadow: 0 2px 5px #ccc;
-  padding: 10px;
-  width: 240px;
-  margin: 16px;
-  float: left;
-  position: relative;
-}
-
-.note h1 {
-  font-size: 1.1em;
-  margin-bottom: 6px;
-}
-
-.note p {
-  font-size: 1.1em;
-  margin-bottom: 10px;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-}
-
-
-
-.note .note_btn {
-  height: 3rem;
-  width: 3rem;
-  position: absolute;
-  bottom: -1rem;
-  right: 1rem;
-  background-color: #f4b400;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.3);
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.note_btn i {
-  font-size: 1.3rem;
-  color: white;
-}
-
-.note_btn:hover {
-  background-color: red;
-}
-
-.note_btn:hover i {
-  color: white;
-}
-
-footer {
-  width: 100%;
-  position: fixed;
-  bottom: 0;
-  text-align: center;
-  background-color: #f4b400;
-  font-size: 1.3rem;
-}
-
-footer p {
-  color: white;
+.footer p span{
+    color: orange;
 }
